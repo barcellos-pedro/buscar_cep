@@ -1,10 +1,7 @@
-.container, input{
-    text-align: center;
+#cep{
+  width: 5em;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#btBuscar{
+  vertical-align: middle;
 }

@@ -1,4 +1,17 @@
-$("#btBuscar").click(()=>{
+$(()=>{
+  $(".tooltip").tooltipster({
+    trigger: 'custom'
+  });
+})
+
+$(".btBuscar").hover(()=>{
+  $(".tooltip").tooltipster("open");
+  setTimeout(()=>{
+    $(".tooltip").tooltipster("close");
+  },1000)
+})
+
+$(".btBuscar").click(()=>{
     let cep = $("#cep").val()
     $.get("https://viacep.com.br/ws/"+ cep +"/json/", buscaCep)
 })

@@ -5,8 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscar CEP</title>
+
+  <link rel="stylesheet" href="css/libs/materialize.min.css">
+  <link rel="stylesheet" href="css/libs/google-fonts.css">
+  <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
+
   <link rel="stylesheet" href="css/style.css">
+
   <script defer src="js/jquery.js"></script>
+  <script defer src="js/tooltipster.bundle.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 
@@ -14,14 +21,17 @@
 
   <div class="container">
 
-    <h1>Buscando CEP com requisição AJAX</h1>
+    <h1>Buscar CEP</h1>
 
     <div class="formulario">
 
-      <label for="cep">CEP</label>
-      <input type="text" id="cep" name="cep">
-
-      <button type="button" id="btBuscar">Buscar</button>
+      <div>
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" name="cep">
+        <a class="waves-effect waves-light btn tooltip" title="Clique aqui para encontrar seu CEP :)"> <i class="material-icons right btBuscar">search</i>
+          Buscar
+        </a>
+      </div>
 
       <label for="endereco">Endereço</label>
       <input type="text" id="endereco" name="endereco">
