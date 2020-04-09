@@ -5,3 +5,14 @@
 #btBuscar{
   vertical-align: middle;
 }
+
+img{
+  display: none;
+  vertical-align: bottom;
+  width: 100px;
+}
+
+p{
+  display: none;
+  color: red;
+}

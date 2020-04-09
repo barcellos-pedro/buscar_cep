@@ -1,6 +1,8 @@
 $(()=>{
   $(".tooltip").tooltipster({
-    trigger: 'custom'
+    trigger: 'custom',
+    side: 'right',
+    animation: 'fade'
   });
 })
 
@@ -14,6 +16,15 @@ $(".btBuscar").hover(()=>{
 $(".btBuscar").click(()=>{
     let cep = $("#cep").val()
     $.get("https://viacep.com.br/ws/"+ cep +"/json/", buscaCep)
+
+    .fail(()=>{
+      console.log("Falha na busca.");
+      $("#erro").toggle();
+      setTimeout(()=>{
+        $("#erro").toggle()
+      },2000)
+    })
+
 })
 
 function buscaCep(data){
